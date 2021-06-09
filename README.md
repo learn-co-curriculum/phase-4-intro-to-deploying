@@ -86,7 +86,7 @@ app goes down for some reason, your database shouldn't go down with it!
 
 > A note on databases: for the labs in this phase, we've been using SQLite as a
 > lightweight database. It's great for quick development, but it doesn't scale
-> well to larger applications. We'll be using Postgres for our database moving
+> well to larger applications. We'll be using Postgresql for our database moving
 > forward. More on that later!
 
 Since all of these elements are required in order to run our application,
