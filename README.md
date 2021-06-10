@@ -43,7 +43,7 @@ web server for hosting a Rails application.
 All web servers share the same common goal: they must be able to handle HTTP
 requests, and send back a response. The simplest kind of websites are known as
 [**static** websites][static web page], which typically means sites that store
-all their content in pre-built HTML files which are saved to the file system and
+all their content in pre-built HTML files that are saved to the file system and
 sent back when a client makes a request for that specific file:
 
 ![static server diagram](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-intro-to-deploying/static-server.png)
@@ -95,7 +95,7 @@ similar environment setup. Let's explore some options.
 
 ## Deploying Options
 
-When it comes to deciding on which platform to use to host our deployed
+When it comes to deciding which platform to use to host our deployed
 applications, there are a number of options, each of which comes with some
 tradeoffs. For Rails in particular, a few popular choices are:
 
