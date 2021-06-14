@@ -51,9 +51,9 @@ sent back when a client makes a request for that specific file:
 [static web page]: https://en.wikipedia.org/wiki/Static_web_page
 
 Static websites are still quite common on the web; but there's also a large portion
-of the web that is [**dynamic**][dynamic web page], which means that the content
-returned from an HTTP request isn't derived from just a HTML file, but instead is
-processed by some code running on the server before being sent back to the client.
+of the web that is [**dynamic**][dynamic web page]. With dynamic pages, the content
+returned from an HTTP request isn't derived from just an HTML file, but instead is
+processed by some code running on the server before it's sent back to the client.
 All Rails applications are **dynamic**, since every request needs to be processed
 by Rails in order to determine the correct response.
 
