@@ -21,7 +21,7 @@ This process essentially involves:
   requests
 - running our code on that server
 
-As a web developer, it's essential to familiarize yourself with the development
+As a web developer, it's essential to familiarize yourself with the deployment
 process for a few reasons:
 
 - It's increasingly expected that developers participate in the deployment
@@ -35,8 +35,8 @@ process for a few reasons:
 - Understanding how your app will perform in different environments (development
   and production) can help you optimize your code's performance.
 
-In this lesson, we'll explore the deploying process and identify the needs of a
-web server for hosting a Rails application.
+In this lesson, we'll explore the deploying process and identify the things a
+web server needs in order to host a Rails application.
 
 ## Defining a Web Server
 
