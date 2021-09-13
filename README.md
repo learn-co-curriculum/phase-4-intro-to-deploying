@@ -167,3 +167,12 @@ your project.
 In the coming lessons, we'll go through that deployment process with a couple of
 applications of varying complexity so you can build the confidence to deploy your
 own projects independently.
+
+## Check For Understanding
+
+Before you move on, make sure you can answer the following questions:
+
+1. How does having an understanding of the deployment process help you as a
+   developer?
+2. What are the advantages and disadvantages of using a Platform as a Service
+   (PAAS) to deploy a Rails app?
