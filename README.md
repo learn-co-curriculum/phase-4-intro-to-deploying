@@ -43,7 +43,7 @@ web server needs in order to host a Rails application.
 All web servers share the same common goal: they must be able to handle HTTP
 requests, and send back a response. The simplest kind of websites are known as
 [**static** websites][static web page], which typically means sites that store
-all their content in pre-built HTML, JavaScript and CSS files that are saved to 
+all their content in pre-built HTML, JavaScript and CSS files that are saved to
 the file system and sent back when a client makes a request for that specific file:
 
 ![static server diagram](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-intro-to-deploying/static-server.png)
@@ -66,10 +66,40 @@ discuss some things a dynamic server needs in order to do its job.
 
 ## Application Environment
 
-Take a moment to think about all the things that are required to run a
-Rails application. When you're working on a lab, what setup is needed so
-that you can type `rails s` in the terminal, and view your website in the
-browser?
+One big consideration for developing any application is: what _environments_
+does the application need to run in?
+
+Broadly speaking, application environments are split into three categories:
+
+- **Development**: When you're working on your application locally, running the
+  code on your personal computer, it's running in the **development**
+  environment. In a development environment, you should be able to easily use
+  debugging tools (like `byebug`), and code analysis tools (like ESLint, which
+  warns you when you're using React incorrectly). You should be able to quickly
+  see the result of adding new code and how that affects your application.
+- **Testing**: When your test runner (like RSpec or Jest) is running, it runs in
+  a **testing** environment. In this environment, your code should run as
+  quickly as possible so that you can get rapid feedback on your application by
+  running your test suite. It should also be as close as possible to your
+  production environment (though this comes with tradeoffs related to how
+  quickly your tests can run).
+- **Production**: When your application is deployed to a server, it will be
+  running in a **production** environment. Some features you have available in
+  the development environment, like debugging tools and hot-reloading when code
+  changes, aren't available in this environment. Instead, the focuses of a
+  production environment are to run your application quickly; be resilient to
+  errors (and to keep a log of what goes wrong); to handle lots of traffic; and
+  generally to make your application as great as it can be for your users.
+
+> Other environments you may use when building an application are a QA (quality
+> assurance, for manual testing of features) environment and a staging
+> environment (a preview of the production environment, usually used as the last
+> stage before deploying a new feature).
+
+Take a moment to think about all the things that are required to run a Rails
+application in your local development environment. When you're working on a lab,
+what setup is needed so that you can type `rails s` in the terminal, and view
+your website in the browser?
 
 For starters, there's your _environment setup_: you could be running on OSX, or
 WSL, or Linux; you'll need to have a recent version of Ruby installed; you'll
@@ -114,6 +144,25 @@ will run on, but they also have configurable [**containers**][containers] with
 resources dedicated to run your code.
 
 [containers]: https://en.wikipedia.org/wiki/OS-level_virtualization
+
+These containers are what makes it possible to quickly and easily set up a new
+production environment that has all the functionality needed to run your site:
+
+- **OS**: Typically Linux. Applications like Rails work well across platforms,
+  so even if you're using a different OS in development, deploying to a server
+  that runs Linux works just fine!
+- **Ruby**: You should use the exact same version of Ruby in development and in
+  production. Since new Ruby versions have new features, as well as fixing
+  security issues in older versions, it's critical to use the same version in
+  both environments.
+- **NodeJS**: It's important to use the same NodeJS version in both environments
+  for the same reasons listed for Ruby.
+- **Database**: While it's possible to use different databases in a development
+  and production environment, it's generally not a good idea to do so: there are
+  some differences in how (for example) SQLite and Postgresql interpret
+  different SQL commands and what features are available in both, so it's
+  considered a best practice to use the same database in development and in
+  production.
 
 There are a lot of considerations when it comes to choosing a platform for
 deploying your application, such as:
