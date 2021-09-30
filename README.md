@@ -43,8 +43,8 @@ web server needs in order to host a Rails application.
 All web servers share the same common goal: they must be able to handle HTTP
 requests, and send back a response. The simplest kind of websites are known as
 [**static** websites][static web page], which typically means sites that store
-all their content in pre-built HTML files that are saved to the file system and
-sent back when a client makes a request for that specific file:
+all their content in pre-built HTML, JavaScript and CSS files that are saved to 
+the file system and sent back when a client makes a request for that specific file:
 
 ![static server diagram](https://curriculum-content.s3.amazonaws.com/phase-4/phase-4-intro-to-deploying/static-server.png)
 
@@ -72,7 +72,7 @@ that you can type `rails s` in the terminal, and view your website in the
 browser?
 
 For starters, there's your _environment setup_: you could be running on OSX, or
-WLS, or Linux; you'll need to have a recent version of Ruby installed; you'll
+WSL, or Linux; you'll need to have a recent version of Ruby installed; you'll
 need Git for version control; and a few other system dependencies.
 
 There are also all of your _application dependencies_: the code specific to
