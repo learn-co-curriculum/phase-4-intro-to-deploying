@@ -129,11 +129,11 @@ When it comes to deciding which platform to use to host our deployed
 applications, there are a number of options, each of which comes with some
 tradeoffs. For Rails in particular, a few popular choices are:
 
-- [Heroku][heroku]
+- [Render][render]
 - [Amazon Web Services (AWS)][aws]
 - [Digital Ocean][digital ocean]
 
-[heroku]: https://www.heroku.com/about
+[render]: https://render.com/
 [aws]: https://aws.amazon.com/
 [digital ocean]: https://www.digitalocean.com/
 
@@ -177,13 +177,13 @@ deploying your application, such as:
   for video processing? Store a lot of files? Handle large database tables?
 
 For now, since we're deploying our very first Rails projects, we're going to
-prioritize **cost** and **ease of use** to decide on a platform, and use Heroku
+prioritize **cost** and **ease of use** to decide on a platform, and use Render
 for deploying in the coming lessons.
 
-[Heroku][heroku] is first and foremost a Platform as a Service (PaaS), which
+[Render][render] is first and foremost a Platform as a Service (PaaS), which
 means they manage the hardware your code runs on as well as the software
 environment, with an aim of making it as simple as possible to take the code
-from your machine and run it on theirs. Heroku also has a free tier for
+from your machine and run it on theirs. Render also has a free tier for
 developers to try out the service at no cost.
 
 [AWS's Elastic Beanstalk][elastic beanstalk] and
@@ -201,7 +201,7 @@ also tend to make it more challenging to fine-tune the environment in a way that
 is optimal for _your_ specific application, rather than _all_ applications
 running on their service.
 
-The upside is that compared to handling that configuration ourselves, using Heroku
+The upside is that compared to handling that configuration ourselves, using Render
 will make it much easier to get our app up and running in a production environment
 on a server.
 
